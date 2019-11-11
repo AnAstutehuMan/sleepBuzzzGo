@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- MetaData -->
+  <title>sleepBuzzzGo</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<meta name="viewport" content="width=device-width" />-->
+  <meta name="description" content="Never miss your destination again" />
+  <meta name="keywords" content="sleepBuzzzGo, Bus, sleepBus, sleepBuzzz, Notification System, Alert, PWA" />
+  <meta name="author" content="Saketh, Lynn, Belany, Elijah" />
+
+  <!-- CSS -->
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- LeafLet API -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+    integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+    crossorigin=""></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="Logo_Small_Lite.png" type="image/x-icon" />
+
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body onload="load()">
+  <!-- Audio -->
+  <audio src="sleepBuzzz.mp3" id="alarm"></audio>
+
+  <!-- Logo Banner -->
+  <header>
+    <image src="Logo_Large.png" width="950px" height="275px"></image>
+  </header>
+
+  <br><br>
+
+  <!-- Form -->
+  <label id="DestLabel">
+    Choose Destination
+  </label>
+  <h3 id="Dest"> 0.00000 , 0.00000 </h3>
+
+  <br />
+
+  <!-- Notification Setting -->
+  <label id="AlrtLabel">
+    Notify me when I am
+    <input id="Alrt" width="5">
+    miles away from my destination
+  </label>
+
+  <br><br>
+  <br><br>
+  
+  <!-- Buttons -->
+  <div id="buttonDiv">
+    <button id="startButton" onclick="start()">Start</button>
+    <button id="stopButton" onclick="stop()">Stop</button>
+  </div>
+
+  <br><br>
+
+
+  <!-- Distance Tracker -->
+  <h3 id="dist">Distance from current position: 0 Mi</h3>
+
+  <br><br>
+
+  <!-- Timer 
+  <p id='safeTimerDisplay'> </p>-->
+
+  <!-- Map from LeafLet -->
+  <div id="mainmap"></div>
+  <script src="script.js"></script>
+</body>
+
+<footer>
+  <!-- F̶̶̶a̶̶̶k̶̶̶e Real Copyright Statement -->
+  <h5>
+    <image src="Logo_Small_Lite.png" style="width: 15px; height: 15px"></image>
+    sleepBuzzz &copy; 2019. All rights reserved under
+    <bold>GNU General Public License v3.0</bold>
+  </h5>
+</footer>
+
+</html>
